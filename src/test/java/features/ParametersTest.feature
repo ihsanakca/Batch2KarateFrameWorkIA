@@ -119,7 +119,7 @@ Feature: Parameters
     Given url baseUrl
     When path 'alluser'
     * param skills = 'PHP'
-    * param pagesize = 25
+    * param pagesize = 5
     * param page = 1
     * method GET
     * status 200
@@ -135,5 +135,20 @@ Feature: Parameters
     Then match response[0].name == "MercanS"
 
     # verify each id
+    Then match each response[*].id == "#number"
 
-  Then match each response[*].id == "#number"
+    #verfiy ids
+    Then def ids = get response[*].id
+    * match ids == [1,102,110,111,122]
+
+    #verfiy ids
+    Then def ids = $response[*].id
+    * match ids == [1,102,110,111,122]
+
+     #verfiy ids
+    Then def users = get response
+    Then def ids = $users[*].id
+    * match ids == [1,102,110,111,122]
+
+
+

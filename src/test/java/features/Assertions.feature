@@ -22,6 +22,7 @@ Feature: using match keyword
       """
 
     * match user.name == '#string'
+    * match user.name == 'aFm'
     * match user.terms == "#number"
     * match user.position == '#boolean'
     * match user.country == '#notpresent'

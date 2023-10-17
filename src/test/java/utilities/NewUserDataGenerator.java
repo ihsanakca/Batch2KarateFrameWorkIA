@@ -26,5 +26,14 @@ public class NewUserDataGenerator {
 
         return newUser;
     }
+    public static String createUserWithString(){
+        Faker faker=new Faker();
+        String userName=faker.name().fullName();
+        String userEmail=faker.internet().emailAddress();
+        String password=faker.internet().password(8,16,true,true,true);
+
+
+        return "body";
+    }
 
 }

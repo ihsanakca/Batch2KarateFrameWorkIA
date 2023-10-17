@@ -41,3 +41,5 @@ Feature: API Tests
 
  # * match response.experience[0].company == ""
   # burada exp. oluşturma değiştirme ve silme yapılabilir
+
+  # Burda hata yaptı hoca... sonra json file ı sildiği için bu test yarım kalmıştır.
